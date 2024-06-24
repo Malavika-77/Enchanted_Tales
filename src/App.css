@@ -274,24 +274,23 @@ textarea {
 }
 
 /* Media query for smaller screens (e.g., mobile phones) */
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .selectedstory {
     padding: 10px;
-  }
-  
-  .selectedstory img {
-    margin-bottom: 10px;
+    width: 100vw; /* Ensure full width on mobile */
+    height: 100vh; /* Ensure full height on mobile */
   }
 
   .selectedstory p {
     font-size: 16px;
+    padding: 0 10px;
   }
-  
+
   .selectedbutton {
-    margin-right: 200px; /* Align button to left */
-    margin-left: auto; /* Align button to right */
-    max-width: 300px; /* Limit button width */
-    width: 100%; /* Make button fill the width */
+    top: 10px; /* Adjust top margin */
+    right: 10px; /* Adjust right margin */
+    padding: 8px 16px; /* Adjust padding */
+    font-size: 14px; /* Adjust font size */
   }
 }
 
