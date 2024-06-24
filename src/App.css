@@ -273,7 +273,7 @@ textarea {
 }
 
 /* Media query for smaller screens (e.g., mobile phones) */
-@media (max-width: 768px) {
+@media (max-width:1600px) {
   .selectedstory {
     padding: 10px;
   }
