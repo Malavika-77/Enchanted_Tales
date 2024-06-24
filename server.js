@@ -11,35 +11,6 @@ app.use(cors());
 app.use(express.json());
 
 
-const server = http.createServer(app);
-const wss = new WebSocket.Server({ server });
-
-// WebSocket connection handler
-wss.on('connection', (ws) => {
-  console.log('WebSocket client connected');
-
-  // Handle messages from WebSocket clients
-  ws.on('message', (message) => {
-    console.log('Received message:', message);
-    
-    // Broadcast message to all WebSocket clients
-    wss.clients.forEach((client) => {
-      if (client.readyState === WebSocket.OPEN) {
-        client.send(message);
-      }
-    });
-  });
-
-  // Handle WebSocket client disconnection
-  ws.on('close', () => {
-    console.log('WebSocket client disconnected');
-  });
-});
-
-
-
-
-
 
 
 
@@ -127,6 +98,7 @@ app.get('/stories', async (req, res) => {
     res.status(500).send('Failed to fetch stories');
   }
 });
+
 
 
 const PORT = process.env.PORT || 5000;

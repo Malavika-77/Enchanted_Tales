@@ -13,22 +13,7 @@ function App() {
   const [stories, setStories] = useState([]);
   const [selectedStory, setSelectedStory] = useState(null);
 
-  useEffect(() => {
-    const ws = new WebSocket('wss://enchanted-tales.onrender.com:10000/ws');
-
-    ws.onopen = () => {
-      console.log('WebSocket connected');
-    };
-
-    ws.onmessage = (event) => {
-      console.log('Received message from server:', event.data);
-    };
-
-    return () => {
-      // Close the WebSocket connection when the component unmounts
-      ws.close();
-    };
-  }, []);
+  
 
   useEffect(() => {
     const fetchStories = async () => {
@@ -40,7 +25,7 @@ function App() {
         console.error('Error fetching stories:', error);
       }
     };
-
+    
     fetchStories();
   }, []);
 
