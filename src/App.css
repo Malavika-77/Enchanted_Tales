@@ -246,6 +246,7 @@ textarea {
 .selectedstory {
   background-image: url(gilback.jpg);
   display: flex;
+  width:1600px;
   flex-direction: column;
   align-items: center;
   padding: 20px;
@@ -273,7 +274,7 @@ textarea {
 }
 
 /* Media query for smaller screens (e.g., mobile phones) */
-@media (max-width:1600px) {
+@media (max-width:763px) {
   .selectedstory {
     padding: 10px;
   }
