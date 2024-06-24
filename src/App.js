@@ -13,19 +13,22 @@ function App() {
   const [stories, setStories] = useState([]);
   const [selectedStory, setSelectedStory] = useState(null);
 
-  const ws = new WebSocket('wss://enchanted-tales.onrender.com:10000/ws');
+  useEffect(() => {
+    const ws = new WebSocket('wss://enchanted-tales.onrender.com:10000/ws');
 
-ws.onopen = () => {
-  console.log('WebSocket connected');
-};
+    ws.onopen = () => {
+      console.log('WebSocket connected');
+    };
 
-ws.onmessage = (event) => {
-  console.log('Received message from server:', event.data);
-};
+    ws.onmessage = (event) => {
+      console.log('Received message from server:', event.data);
+    };
 
-// Example: Sending a message to the server
-ws.send('Hello from client!');
-
+    return () => {
+      // Close the WebSocket connection when the component unmounts
+      ws.close();
+    };
+  }, []);
 
   useEffect(() => {
     const fetchStories = async () => {
