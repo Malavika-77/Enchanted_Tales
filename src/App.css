@@ -288,7 +288,7 @@ textarea {
   }
   
   .selectedbutton {
-    margin-right: auto; /* Align button to left */
+    margin-right: 100px; /* Align button to left */
     margin-left: auto; /* Align button to right */
     max-width: 300px; /* Limit button width */
     width: 100%; /* Make button fill the width */
