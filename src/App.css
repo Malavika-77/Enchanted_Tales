@@ -272,6 +272,15 @@ textarea {
   font-size: 16px;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .selectedstory h2 {
+    font-size: 24px;
+  }
+
+  .selectedstory p {
+    font-size: 14px;
+  }
+}
 .footer{
   background-image: url(cinderella.jpg);
  width: 1600px;
