@@ -4,7 +4,7 @@ import en from './Enchanted.png';
 import AuthenticationPopup from './AuthenticationPopup';
 import StoryForm from './StoryForm';
 import StoryCard from './StoryCard';
-import footerImg from './footer.png';
+
 function App() {
   const [showNewDiv, setShowNewDiv] = useState(false);
   const [showMainDiv, setShowMainDiv] = useState(true);
@@ -12,6 +12,20 @@ function App() {
   const [showAuthPopup, setShowAuthPopup] = useState(false);
   const [stories, setStories] = useState([]);
   const [selectedStory, setSelectedStory] = useState(null);
+
+  const ws = new WebSocket('wss://enchanted-tales.onrender.com:10000/ws');
+
+ws.onopen = () => {
+  console.log('WebSocket connected');
+};
+
+ws.onmessage = (event) => {
+  console.log('Received message from server:', event.data);
+};
+
+// Example: Sending a message to the server
+ws.send('Hello from client!');
+
 
   useEffect(() => {
     const fetchStories = async () => {

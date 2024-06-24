@@ -4,10 +4,45 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
 dotenv.config();
-
+const http = require('http');
+const WebSocket = require('ws');
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+
+const server = http.createServer(app);
+const wss = new WebSocket.Server({ server });
+
+// WebSocket connection handler
+wss.on('connection', (ws) => {
+  console.log('WebSocket client connected');
+
+  // Handle messages from WebSocket clients
+  ws.on('message', (message) => {
+    console.log('Received message:', message);
+    
+    // Broadcast message to all WebSocket clients
+    wss.clients.forEach((client) => {
+      if (client.readyState === WebSocket.OPEN) {
+        client.send(message);
+      }
+    });
+  });
+
+  // Handle WebSocket client disconnection
+  ws.on('close', () => {
+    console.log('WebSocket client disconnected');
+  });
+});
+
+
+
+
+
+
+
+
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
