@@ -18,7 +18,8 @@ function App() {
   useEffect(() => {
     const fetchStories = async () => {
       try {
-        const response = await fetch('/stories');
+        const response = await fetch('http://localhost:5000/stories');
+
         const data = await response.json();
         setStories(data);
       } catch (error) {
