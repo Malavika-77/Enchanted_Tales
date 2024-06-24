@@ -265,22 +265,36 @@ textarea {
 }
 
 .selectedbutton {
-  position:"absolute";
-  margin-right:"10px";
-  margin-top: 20px;
+  position: absolute;
+  right: 10px; /* Adjust margin-right using right */
+  top: 20px; /* Adjust margin-top using top */
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
 }
+
+/* Media query for smaller screens (e.g., mobile phones) */
 @media (max-width: 768px) {
-  .selectedstory h2 {
-    font-size: 24px;
+  .selectedstory {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+  
+  .selectedstory img {
+    margin-bottom: 10px; /* Adjust margin-bottom for smaller screens */
   }
 
   .selectedstory p {
-    font-size: 14px;
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+  
+  .selectedbutton {
+    right: 5px; /* Adjust margin-right for smaller screens */
+    top: 10px; /* Adjust margin-top for smaller screens */
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
   }
 }
+
 .footer{
   background-image: url(cinderella.jpg);
  width: 1600px;
