@@ -235,6 +235,7 @@ textarea {
 @media (max-width: 767px) {
   .story-cards-container {
     grid-template-columns: repeat(1, 1fr);
+    margin-top:200px;
   }
 }
 .heading {
@@ -260,6 +261,8 @@ textarea {
   
   
 }
+
+
 @media (max-width: 767px) {
 .img {
   background-color: black;
