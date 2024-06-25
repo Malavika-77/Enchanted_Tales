@@ -86,6 +86,14 @@ p {
   background-color: #0056b3;
   transform: translateY(-5px);
 }
+.new-div{
+ 
+  background-color: black;
+left: 0px;
+width:1600px;
+height: auto;
+}
+@media (max-width: 767px) {
 .new-div {
   background-color: black;
   width: 90%; /* Adjust width to fit smaller screens */
@@ -93,7 +101,7 @@ p {
   margin: 0 auto; /* Center the div horizontally */
   height: auto; /* Let the height adjust automatically */
   padding: 20px; /* Add padding for better spacing */
-}
+}}
 
  .wel{
 
@@ -102,6 +110,15 @@ background-image: url(cinderella.jpg);
 
 
  }
+@media (max-width: 767px) {
+.wel {
+  
+  width: 90%; /* Adjust width to fit smaller screens */
+  max-width: 600px; /* Set a maximum width for larger screens */
+  margin: 0 auto; /* Center the div horizontally */
+  height: auto; /* Let the height adjust automatically */
+  padding: 20px; /* Add padding for better spacing */
+}}
  .authentication-popup {
   position: absolute;
   top: 50%;
@@ -328,3 +345,12 @@ textarea {
  width: 1600px;
  height: 100px;
 }
+@media (max-width: 767px) {
+.footer {
+  
+  width: 90%; /* Adjust width to fit smaller screens */
+  max-width: 600px; /* Set a maximum width for larger screens */
+  margin: 0 auto; /* Center the div horizontally */
+  height: auto; /* Let the height adjust automatically */
+  padding: 20px; /* Add padding for better spacing */
+}}
