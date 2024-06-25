@@ -276,13 +276,13 @@ textarea {
 /* Media query for smaller screens (e.g., mobile phones) */
 @media (max-width: 768px) {
   .selectedstory {
-    display: flex;
+    
  
   flex-direction: column;
   align-items: center;
     padding: 10px;
-    width: 100vw; /* Ensure full width on mobile */
-    height: 100vh; /* Ensure full height on mobile */
+    width: 100%; /* Ensure full width on mobile */
+    height: 100%; /* Ensure full height on mobile */
   }
 
   .selectedstory p {
@@ -292,7 +292,7 @@ textarea {
 
   .selectedbutton {
     top: 10px; /* Adjust top margin */
-    right: 10px; /* Adjust right margin */
+    left: 0px; /* Adjust right margin */
     padding: 8px 16px; /* Adjust padding */
     font-size: 14px; /* Adjust font size */
   }
