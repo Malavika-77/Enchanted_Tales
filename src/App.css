@@ -266,11 +266,13 @@ textarea {
 }
 
 .selectedbutton {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  width: 100%; /* Make button fill the width */
+   backgroundColor: blue;
+              position: absolute;
+              borderRadius: 80px;
+              left: 1300px;
+              bottom: 0px;
+              height: 30px;
+              width: 200px;
 }
 
 .footer{
