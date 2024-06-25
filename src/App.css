@@ -272,17 +272,20 @@ textarea {
   cursor: pointer;
   width: 100%; /* Make button fill the width */
 }
-
 /* Media query for smaller screens (e.g., mobile phones) */
 @media (max-width: 768px) {
   .selectedstory {
-    
- 
-  flex-direction: column;
-  align-items: center;
+    flex-direction: column;
+    align-items: center;
     padding: 10px;
     width: 100%; /* Ensure full width on mobile */
     height: 100%; /* Ensure full height on mobile */
+    position: fixed; /* Fixed position to cover entire screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000; /* Ensure it is on top of other elements */
   }
 
   .selectedstory p {
@@ -291,13 +294,14 @@ textarea {
   }
 
   .selectedbutton {
-    top: 10px; /* Adjust top margin */
-    left: 0px; /* Adjust right margin */
+    position: fixed; /* Fixed position to place it in the bottom left corner */
+    bottom: 10px; /* Distance from the bottom of the screen */
+    left: 10px; /* Distance from the left of the screen */
     padding: 8px 16px; /* Adjust padding */
     font-size: 14px; /* Adjust font size */
+    width: auto; /* Adjust width */
   }
 }
-
 .footer{
   background-image: url(cinderella.jpg);
  width: 1600px;
