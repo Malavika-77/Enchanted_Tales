@@ -133,15 +133,7 @@ function App() {
               </React.Fragment>
               
             ))}
-            <button  style={{
-              backgroundColor: "blue",
-              position: "absolute",
-              borderRadius: "80px",
-              left: "1300px",
-              bottom: "0px",
-              height: "30px",
-              width: "200px",
-            }}onClick={handleBackButtonClick}>Back</button>
+            <button className="selectedbutton" onClick={handleBackButtonClick}>Back</button>
 
           </p>
         </div>
