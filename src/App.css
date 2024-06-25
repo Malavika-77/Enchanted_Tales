@@ -261,6 +261,11 @@ textarea {
   
   
 }
+@media (max-width: 767px) {
+.heading-container {
+ height:300px;
+}}
+
 
 
 @media (max-width: 767px) {
