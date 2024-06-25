@@ -340,7 +340,7 @@ textarea {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1000; /* Ensure it is on top of other elements */
+    /* Ensure it is on top of other elements */
     overflow-y: auto; /* Add this if content overflows */
   }
 
@@ -379,8 +379,8 @@ textarea {
 
   .selectedbutton {
     position: fixed; /* Fixed position to place it in the bottom left corner */
-    bottom: 10px; /* Distance from the bottom of the screen */
-    left: 10px; /* Distance from the left of the screen */
+    top: 10px; /* Distance from the bottom of the screen */
+    right: 800px; /* Distance from the left of the screen */
     padding: 8px 16px; /* Adjust padding */
     font-size: 14px; /* Adjust font size */
     width: auto; /* Adjust width */
