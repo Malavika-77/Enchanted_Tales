@@ -260,7 +260,15 @@ textarea {
   
   
 }
-
+@media (max-width: 767px) {
+.img {
+  background-color: black;
+  width: 90%; /* Adjust width to fit smaller screens */
+  max-width: 600px; /* Set a maximum width for larger screens */
+  margin: 0 auto; /* Center the div horizontally */
+  height: auto; /* Let the height adjust automatically */
+  padding: 20px; /* Add padding for better spacing */
+}}
 
 
 
