@@ -86,12 +86,13 @@ p {
   background-color: #0056b3;
   transform: translateY(-5px);
 }
-.new-div{
- 
+.new-div {
   background-color: black;
-left: 0px;
-width:1600px;
-height: auto;
+  width: 90%; /* Adjust width to fit smaller screens */
+  max-width: 600px; /* Set a maximum width for larger screens */
+  margin: 0 auto; /* Center the div horizontally */
+  height: auto; /* Let the height adjust automatically */
+  padding: 20px; /* Add padding for better spacing */
 }
 
  .wel{
@@ -243,6 +244,11 @@ textarea {
   
 }
 
+
+
+
+
+
 .selectedstory {
   background-image: url(gilback.jpg);
   display: flex;
@@ -297,6 +303,7 @@ textarea {
     max-width: 90%;
     height: auto;
     margin-bottom: 10px;
+    margin-right: 10px;
   }
 
   .selectedstory p {
